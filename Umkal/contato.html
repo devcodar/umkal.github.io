@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Umkal - Contato</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1, h2, h3, .btn-primary {
+            color: #000000; /* Cor dramática */
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background-color: #0d0d0d;
+            border-bottom: 2px solid #c77103;
+        }
+
+        .section-title h1 {
+            color: #c77103;
+        }
+
+        .contact-section {
+            background-color: #111;
+            padding: 9px 0;
+        }
+
+        .contact-section .col-md-4 .btn-square {
+            background-color: #c77103;
+        }
+
+        .contact-section h3 {
+            color: #c77103;
+        }
+
+        .form-floating input, .form-floating textarea {
+            background-color: #222;
+            border: 1px solid #444;
+            color: #fff;
+        }
+
+        .form-floating label {
+            color: #bbb;
+        }
+
+        .form-floating input:focus, .form-floating textarea:focus {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .form-floating textarea {
+            height: 150px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .footer h4, .footer a {
+            color: #c77103;
+        }
+
+        .btn-primary {
+            background-color: #c77103;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #f99c3b;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .section-title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="/Umkal/Group2.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
+                        <a href="sobre.html" class="nav-item nav-link">Sobre nós</a>
+                        <a href="produto.html" class="nav-item nav-link">Portfolio</a>
+                        <a href="contato.html" class="nav-item nav-link active">Contato</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Contact Section Start -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="section-title text-center mx-auto" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-primary">Contate-Nós</p>
+                <h1 class="display-6">Entre em contato conosco</h1>
+            </div>
+            <div class="row g-5 mb-5">
+                <div class="col-md-4 text-center">
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Tem alguma dúvida?</h3>
+                    <p class="mb-4">Se você tiver perguntas ou quiser saber mais sobre nossos produtos e parcerias, não hesite em nos contatar. Nossa equipe está à disposição para garantir que você tenha uma experiência excepcional.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                                    <label for="nome">Seu Nome</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
+                                    <label for="email">Seu e-mail</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="assunto" placeholder="Assunto">
+                                    <label for="assunto">Assunto</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Deixe a sua messagem" id="messagem" style="height: 120px"></textarea>
+                                    <label for="messagem">Messagem</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Enviar Messagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="h-100">
+                        <iframe class="w-100 rounded"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62235.86380410947!2d-38.327031350000006!3d-12.85996645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7163e1a53f73969%3A0xdd9b017baf4d24c2!2sLauro%20de%20Freitas%2C%20State%20of%20Bahia!5e0!3m2!1sen!2sbr!4v1728989896312!5m2!1sen!2sbr%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade%22%3E%3C/iframe%3E"
+                        frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-primary mb-4">Links Rápidos</h4>
+                    <a class="btn btn-link" href="">Sobre Nós</a>
+                    <a class="btn btn-link" href="">Fale Conosco</a>
+                    <a class="btn btn-link" href="">Termos e Condições</a>
+                    <a class="btn btn-link" href="">Suporte</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-primary mb-4">Seja parceiro</h4>
+                    <p>Cadastre-se para mais informações.</p>
+                    <div class="position-relative w-100">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Digite o seu e-mail">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Assinar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div class="container-fluid copyright " style= "">
+        <div class="container">
+            <div class="">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-medium" href="#">CDC DISTRIBUIDORA</a>, Todos os Direitos Reservados.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
