@@ -46,6 +46,10 @@
             background-color: #0d0d0d;
             border-bottom: 2px solid #c77103;
         }
+        .navbar-brand img {
+            position: relative;
+            top: -2px;
+        }
 
         .section-title h1 {
             color: #c77103;
@@ -53,7 +57,7 @@
 
         .product-section {
             padding: 80px 0;
-            background-color: #0d0d0d; /* Cor de fundo uniforme para a seção de produtos */
+            background-color: #0d0d0d;
         }
 
         .product-item {
@@ -61,6 +65,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
             border-radius: 8px;
+            text-align: center;
         }
 
         .product-item img {
@@ -104,22 +109,19 @@
         }
 
         .modal-body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 600px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            text-align: center;
         }
 
-        .modal-body img {
-            max-width: 50%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 30px rgba(216, 212, 212, 0.692);
-        }
-
-        .modal-body h5 {
-            color: #c77103;
-            margin-bottom: 15px;
+        .modal-body .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
 
         .footer {
@@ -163,6 +165,14 @@
             .banner h2 {
                 font-size: 24px;
             }
+
+            .modal-body {
+                min-height: 400px;
+            }
+
+            .product-item img {
+                height: auto;
+            }
         }
 
         /* Custom Backgrounds for each banner */
@@ -181,16 +191,38 @@
         .bg-varietal {
             background-image: url('GRAN pop.jpg');
         }
+
+        /* Aumentar o tamanho dos produtos no modo desktop */
+        @media (min-width: 992px) {
+            .product-item {
+                width: 320px;
+                height: 350px;
+            }
+
+            .product-item img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        /* Estilizando o carousel da categoria Varietal */
+        #product-list-varietal {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+
+        .owl-carousel .owl-stage-outer {
+            overflow: hidden;
+        }
+
+        .owl-carousel .owl-item {
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
-
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
         <div class="container">
@@ -216,7 +248,6 @@
 
     <!-- Banners for Categories -->
     <div class="banner bg-premium">
-        <h2></h2>
     </div>
     <div class="container-fluid product-section py-5">
         <div class="container">
@@ -225,7 +256,6 @@
     </div>
 
     <div class="banner bg-gran-reserva">
-        <h2></h2>
     </div>
     <div class="container-fluid product-section py-5">
         <div class="container">
@@ -234,7 +264,6 @@
     </div>
 
     <div class="banner bg-reserva">
-        <h2></h2>
     </div>
     <div class="container-fluid product-section py-5">
         <div class="container">
@@ -243,11 +272,10 @@
     </div>
 
     <div class="banner bg-varietal">
-        <h2></h2>
     </div>
     <div class="container-fluid product-section py-5">
         <div class="container">
-            <div class="row g-5" id="product-list-varietal"></div>
+            <div id="product-list-varietal" class="owl-carousel"></div>
         </div>
     </div>
 
@@ -305,173 +333,101 @@
             {
                 id: 1,
                 image: "img/01-transformed.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/01.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Premium",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Premium"
             },
             {
                 id: 2,
                 image: "produtos/13.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/02.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Gran Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Gran Reserva"
             },
             {
                 id: 3,
                 image: "produtos/2.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/03.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Gran Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Gran Reserva"
             },
             {
                 id: 4,
                 image: "img/04-removebg-preview.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/04.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Gran Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Gran Reserva"
             },
             {
                 id: 5,
                 image: "produtos/4.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/07.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Reserva"
             },
-
             {
                 id: 6,
                 image: "produtos/5.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/06.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Reserva"
             },
             {
                 id: 7,
                 image: "produtos/6.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/05.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Reserva"
             },
             {
                 id: 8,
                 image: "produtos/7.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/09.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Varietal",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Varietal"
             },
             {
                 id: 9,
                 image: "produtos/8.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/10.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Varietal",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Varietal"
             },
             {
                 id: 10,
                 image: "produtos/9.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/11.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Varietal",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Varietal"
             },
             {
                 id: 11,
                 image: "produtos/10.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/12.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Varietal",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Varietal"
             },
             {
                 id: 12,
                 image: "produtos/11.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/14.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Varietal",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Varietal"
             },
             {
                 id: 13,
                 image: "produtos/12.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/13.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Varietal",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
+                category: "Varietal"
             },
             {
                 id: 14,
                 image: "produtos/reserva_chandonnay.png",
+                modalImage: "/DANY_BANNER_VINHOS_800/08.jpg",
                 name: "Umkal Cabernet Sauvignon",
-                category: "Reserva",
-                details: `
-                    <strong>Visão:</strong> Cor rubi profunda.<br>
-                    <strong>Olfato:</strong> Um bouquet exuberante revela aromas de frutas vermelhas maduras, baunilha e chocolate.<br>
-                    <strong>Paladar:</strong> Taninos suaves e bem integrados, com uma estrutura robusta e persistente.<br>
-                    <strong>Harmonização:</strong> Ideal para carnes vermelhas, cordeiro e pratos de caça.
-                `
-            },
-            // Adicione mais produtos aqui...
+                category: "Reserva"
+            }
         ];
 
         // Função para carregar os produtos e criar modais
@@ -495,19 +451,16 @@
                     </div>
                 `;
 
-                categories[product.category].innerHTML += productHTML;
+                if (categories[product.category]) {
+                    categories[product.category].innerHTML += productHTML;
+                }
 
                 modalHTML += `
                     <div class="modal fade" id="modal-${index}" tabindex="-1" aria-labelledby="modalLabel-${index}" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalLabel-${index}">${product.name}</h5>
+                                <div class="modal-body" style="background-image: url('${product.modalImage}');">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="${product.image}" alt="${product.name}">
-                                    <p>${product.details}</p>
                                 </div>
                             </div>
                         </div>
@@ -518,7 +471,29 @@
             document.body.insertAdjacentHTML('beforeend', modalHTML);
         }
 
-        document.addEventListener("DOMContentLoaded", loadProducts);
+        document.addEventListener("DOMContentLoaded", function () {
+            loadProducts();
+
+            // Inicializando o carousel da categoria Varietal
+            $('#product-list-varietal').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+        });
     </script>
 </body>
 

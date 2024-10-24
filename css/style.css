@@ -200,7 +200,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(208, 228, 32, 0), rgba(194, 165, 36, 0)), url(/Umkal/img/mountains-clear-sky-torres-del-paine-national-park-chile.jpg) center no-repeat;
+    background: linear-gradient(rgba(208, 228, 32, 0), rgba(194, 165, 36, 0)), url(banner\ premium.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -223,25 +223,13 @@
 }
 
 .section-title::before {
-    position: absolute;
+    position: center;
     content: "";
-    width: 50%;
+    width: 90%;
     height: 2px;
     bottom: 0;
     left: 0;
     background: var(--primary);
-}
-
-.section-title::after {
-    position: absolute;
-    content: "";
-    width: 28px;
-    height: 28px;
-    bottom: -13px;
-    left: calc(25% - 13px);
-    background: var(--dark);
-    border: 10px solid #FFFFFF;
-    border-radius: 28px;
 }
 
 .section-title.text-center::before {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
-    <title>Tea House - Tea Shop Website Template</title>
+    <title>Umkal - Sobre Nós</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="vinhos, vinícolas, cordilheira dos andes" name="keywords">
+    <meta content="Conheça a história e a tradição da Umkal, vinhos originários da Cordilheira dos Andes" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -29,6 +29,188 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1, h2, h3, .btn-primary {
+            color: #000000; /* Cor dramática */
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background-color: #0d0d0d;
+            border-bottom: 5px solid #c77103;
+        }
+
+        .section-title h1 {
+            color: #f08800d7;
+        }
+
+        /* Estilo da seção sobre */
+        .about-section {
+            background-color: #111;
+            padding: 9px 0;
+        }
+
+        .about-section p {
+            color: hsl(46, 100%, 36%);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-section .border-top {
+            border-top: 2px solid #c77103;
+        }
+
+        /* Container de Parceiros */
+        .partners-section {
+            background-color: #000;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .partners-section img {
+            max-width: 80px;
+            margin: 0 15px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .footer h4, .footer a {
+            color: #c77103;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .about-section h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .banner {
+            background-size: cover;
+            color: #f1f1f1;
+            padding: 150px;
+            text-align: center;
+            margin-bottom: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .bg-premium {
+            background-image: url('produtos/aviaofoto.jpg');
+        }
+
+        .bg-gran-reserva {
+            background-image: url('banner premium.jpg');
+            border-radius: 10px;
+        }
+
+        .bg-reserva {
+            background-image: url('produtos/cordilheira-dos-andesquero.jpg');
+            border-radius: 10px;
+        }
+
+        .bg-vari {
+            background-image: url('produtos/Monte_Aconcagua.jpg');
+            border-radius: 10px;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            margin: 50px 0;
+            padding: 40px 0;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #c77103;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .timeline-item p {
+            color: #f1f1f1;
+        }
+
+        .timeline-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #c77103;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+
+        .timeline-item::before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 22px;
+            right: 30px;
+            border: solid transparent;
+            border-width: 10px;
+            border-left-color: #c77103;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even::before {
+            right: auto;
+            left: 30px;
+            border-left-color: transparent;
+            border-right-color: #c77103;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,36 +220,22 @@
     </div>
     <!-- Spinner End -->
 
-    
     <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
+    <div class="container-fluid sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light py-2 py-lg-0">
                 <a href="index.html" class="navbar-brand">
-                    <img class="img-fluid" src="img/logo.png" alt="Logo">
+                    <img class="img-fluid" src="/Umkalogo.png" alt="Logo Umkal">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Products</a>
-                        <a href="store.html" class="nav-item nav-link">Store</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light rounded-0 m-0">
-                                <a href="feature.html" class="dropdown-item active">Features</a>
-                                <a href="blog.html" class="dropdown-item">Blog Article</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <div class="border-start ps-4 d-none d-lg-block">
-                        <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
+                        <a href="index.html" class="nav-item nav-link">Início</a>
+                        <a href="sobre.html" class="nav-item nav-link active">Sobre Nós</a>
+                        <a href="produto.html" class="nav-item nav-link">Portfólio</a>
+                        <a href="contato.html" class="nav-item nav-link">Contato</a>
                     </div>
                 </div>
             </nav>
@@ -75,142 +243,91 @@
     </div>
     <!-- Navbar End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-dark mb-4 animated slideInDown">Features</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-dark" aria-current="page">Features</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Video Start -->
-    <div class="container-fluid video" style="margin-top: 6rem; margin-bottom: 6rem;">
+    <!-- About Section Start -->
+    <div class="about-section">
         <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-6 py-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="py-5">
-                        <h1 class="display-6 mb-4">Tea is a drink of <span class="text-white">health</span> and <span class="text-white">beauty</span></h1>
-                        <h5 class="fw-normal lh-base fst-italic text-white mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit</h5>
-                        <div class="row g-4 mb-5">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Great tea assortment</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Spices & additives</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Unique accessories</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Good for health & beauty</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="btn btn-light rounded-pill py-3 px-5" href="">Explore More</a>
-                    </div>
+            <div class="section-title">
+                <h1 class="display-6">Sua Rota no Mundo dos Vinhos</h1>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <img src="img/aviadora.jpg" alt="Aviadora">
+                    <h2>A Origem de Uma Paixão</h2>
+                    <p>UMKAL não é apenas uma marca de vinhos; é uma história de amor que se desenrola entre as nuvens e as vinhas. Nascida da paixão de uma aviadora que, a cada voo para Santiago, se apaixonava mais profundamente pela cultura chilena, UMKAL é a personificação de uma jornada que une os céus à terra.</p>
+                    <blockquote>"Entre o Pacífico e os Andes, descobri não apenas vinhos excepcionais, mas uma conexão profunda com a terra e seu povo." - Fundadora da UMKAL</blockquote>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
+                <div class="timeline-item">
+                    <img src="img/waypoint.jpg" alt="Waypoint no Céu">
+                    <h2>O Significado Por Trás do Nome</h2>
+                    <p>UMKAL é uma das "posições no céu" que guiam os aviões em suas rotas, conhecidos como waypoints pelos pilotos. Este ponto serve como referência para prosseguir na chegada em Santiago ou retornar para Mendoza, na Argentina.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="/produtos/cordilheira-dos-andesquero.jpg" alt="Cordilheira dos Andes">
+                    <h2>Precisão, Aventura e Conexão</h2>
+                    <p>Assim como os pilotos usam UMKAL como uma referência para tomadas de decisão, nossa marca se compromete com a excelência em cada garrafa. A jornada sobre os Andes reflete a beleza e o desafio de fazer vinhos excepcionais.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="img/terroir.jpg" alt="Terroir Chileno">
+                    <h2>O Terroir Único: Entre o Céu e a Terra</h2>
+                    <p>O que torna os vinhos UMKAL verdadeiramente especiais é o microclima influenciado pela proximidade do Oceano Pacífico e pela majestosa Cordilheira dos Andes. Vinhas centenárias com raízes profundas capturam a essência da terra chilena, irrigadas com a pureza do degelo.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="/produtos/Monte_Aconcagua.jpg" alt="Aconcágua">
+                    <h2>Uma Vista Privilegiada: O Aconcágua</h2>
+                    <p>Assim como os passageiros admiram o Aconcágua com 7.000 metros de altitude durante o voo, os apreciadores dos nossos vinhos são levados a uma jornada sensorial pelas alturas do sabor e da qualidade.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="img/inovacao.jpg" alt="Inovação">
+                    <h2>Inovação e Tradição</h2>
+                    <p>Assim como as tecnologias usadas para uma travessia segura sobre a cordilheira, a UMKAL utiliza uma combinação de tecnologia de ponta e sabedoria tradicional para garantir vinhos de alta qualidade em cada safra.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="/produtos/aviaofoto.jpg" alt="Pioneirismo">
+                    <h2>Pioneirismo: No Ar e na Terra</h2>
+                    <p>Inspirados pelo espírito pioneiro de Luis Cenobio Candelaria, o primeiro aviador a cruzar a Cordilheira dos Andes em 1918, a UMKAL busca constantemente inovar, respeitando a tradição e o paladar dos apreciadores de vinho.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="img/garrafa-vinho.jpg" alt="Vinho UMKAL">
+                    <h2>Experimente UMKAL</h2>
+                    <p>Cada garrafa é uma jornada sensorial que captura a essência dos Andes, a paixão pela aviação e o compromisso com a excelência enológica. Descubra o sabor das alturas com UMKAL.</p>
+                    <div style="text-align: center;">
+                        <button class="btn btn-primary">Conheça Nossos Vinhos</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Video End -->
+    <!-- About Section End -->
 
-
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
+    <!-- Parceiros Section Start -->
+    <div class="partners-section">
+        <div class="container">
+            <h2 class="text-primary">Nossos Parceiros</h2>
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="img/image (1).png" alt="Parceiro 1">
+                <img src="img/cdclogo.png" alt="Parceiro 2">
             </div>
         </div>
     </div>
-    <!-- Video Modal End -->
-
+    <!-- Parceiros Section End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid footer mt-5 py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <h4 class="text-primary mb-4">Links Rápidos</h4>
+                    <a class="btn btn-link" href="sobre.html">Sobre nós</a>
+                    <a class="btn btn-link" href="contato.html">Fale Conosco</a>
+                    <a class="btn btn-link" href="">Termos e Condições</a>
+                    <a class="btn btn-link" href="">Suporte</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary mb-4">Business Hours</h4>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <h4 class="text-primary mb-4">Seja parceiro</h4>
+                    <p>Cadastre-se para mais informações.</p>
                     <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Digite o seu e-mail">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Assinar</button>
                     </div>
                 </div>
             </div>
@@ -218,27 +335,18 @@
     </div>
     <!-- Footer End -->
 
-
-    <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
         <div class="container">
-            <div class="row">
+            <div class="">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-medium" href="https://htmlcodex.com">HTML Codex</a>
+                    &copy; <a class="fw-medium" href="#">CDC DISTRIBUIDORA, Todos os Direitos Reservados.</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Copyright End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
