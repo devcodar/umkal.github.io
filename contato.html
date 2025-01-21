@@ -260,6 +260,50 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("PF8bQc1UkxbXZVTF-"); // Substitua pela sua Public Key
+    })();
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Evita o envio padrão do formulário
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const assunto = document.getElementById("assunto").value;
+            const mensagem = document.getElementById("messagem").value;
+
+            if (!nome || !email || !assunto || !mensagem) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Dados para o template do EmailJS
+            const templateParams = {
+                from_name: nome,
+                from_email: email,
+                subject: assunto,
+                message: mensagem,
+            };
+
+            emailjs.send("service_3k5jmbo", "template_35eafy1", templateParams)
+                .then(function (response) {
+                    alert("E-mail enviado com sucesso!");
+                    form.reset();
+                }, function (error) {
+                    console.error("Erro ao enviar o e-mail:", error);
+                    alert("Erro ao enviar o e-mail. Tente novamente mais tarde.");
+                });
+        });
+    });
+</script>
+
+
 </body>
 
 </html>

@@ -33,6 +33,55 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+          .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #c77103;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal-content button {
+            background-color: #c77103;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-content button:hover {
+            background-color: #f99c3b;
+        }
         /* Ajuste para corrigir o posicionamento da logomarca */
         .navbar-brand img {
             position: relative;
@@ -54,6 +103,10 @@
         .navbar {
             background-color: #0d0d0d;
             border-bottom: 2px solid #c77103;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%281, 1, 1, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
 
         .carousel-item video {
@@ -339,6 +392,13 @@
      <a class="chat" href="https://wa.me/+5571996963559?send?text=Seja parceiro">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733641.png" title="Whatsapp Chat">
     </a>
+    <div id="ageModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Alerta: Proibido para Menores de 18 Anos</h2>
+            <p>Este site realiza a venda de bebidas alcoólicas e é restrito para maiores de 18 anos.</p>
+            <button id="acceptButton">Eu sou maior de 18 anos</button>
+        </div>
+    </div>
 
 
     <!-- JavaScript Libraries -->
@@ -352,6 +412,20 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/b7645d99-eb6e-4918-bedf-41b38cf153ca-loader.js" ></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("ageModal");
+            const acceptButton = document.getElementById("acceptButton");
+
+            // Exibe o modal
+            modal.style.display = "flex";
+
+            // Fecha o modal ao clicar no botão "Aceitar"
+            acceptButton.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        });
+    </script>
 </body>
 
 </html>
